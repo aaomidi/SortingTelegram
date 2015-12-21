@@ -135,7 +135,7 @@ public class SortingTelegram {
             StringManager.logn("");
 
             {
-                StringManager.log("Do you want to try again? Y/N");
+                StringManager.logn("Do you want to try again? Y/N");
                 String choice = scanner.nextLine();
                 if (!choice.equalsIgnoreCase("Y")) {
                     break;
