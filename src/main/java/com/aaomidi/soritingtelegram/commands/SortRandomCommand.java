@@ -41,7 +41,7 @@ public class SortRandomCommand extends TelegramCommand {
         }
 
         String[] strings = new String[size];
-        event.getChat().sendMessage("Starting sorting using " + size + " data points!", getTelegramBot());
+        event.getChat().sendMessage("Started sorting using " + size + " data points!", getTelegramBot());
         Random random = new Random();
         for (int i = 0; i < size; i++) {
             String generated = StringManager.generateString(random.nextInt(10));
