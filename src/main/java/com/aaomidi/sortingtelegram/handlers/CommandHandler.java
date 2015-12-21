@@ -1,8 +1,8 @@
-package com.aaomidi.soritingtelegram.handlers;
+package com.aaomidi.sortingtelegram.handlers;
 
-import com.aaomidi.soritingtelegram.SortingTelegram;
-import com.aaomidi.soritingtelegram.commands.SortRandomCommand;
-import com.aaomidi.soritingtelegram.model.TelegramCommand;
+import com.aaomidi.sortingtelegram.SortingTelegram;
+import com.aaomidi.sortingtelegram.commands.SortRandomCommand;
+import com.aaomidi.sortingtelegram.model.TelegramCommand;
 import pro.zackpollard.telegrambot.api.event.chat.message.CommandMessageReceivedEvent;
 import pro.zackpollard.telegrambot.api.event.chat.message.TextMessageReceivedEvent;
 

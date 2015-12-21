@@ -1,4 +1,4 @@
-package com.aaomidi.soritingtelegram.util;
+package com.aaomidi.sortingtelegram.util;
 
 import java.security.SecureRandom;
 

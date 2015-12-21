@@ -1,9 +1,9 @@
-package com.aaomidi.soritingtelegram.commands;
+package com.aaomidi.sortingtelegram.commands;
 
-import com.aaomidi.soritingtelegram.SortingTelegram;
-import com.aaomidi.soritingtelegram.model.TelegramCommand;
-import com.aaomidi.soritingtelegram.util.IntegerConverter;
-import com.aaomidi.soritingtelegram.util.StringManager;
+import com.aaomidi.sortingtelegram.SortingTelegram;
+import com.aaomidi.sortingtelegram.model.TelegramCommand;
+import com.aaomidi.sortingtelegram.util.IntegerConverter;
+import com.aaomidi.sortingtelegram.util.StringManager;
 import pro.zackpollard.telegrambot.api.chat.Chat;
 import pro.zackpollard.telegrambot.api.event.chat.message.CommandMessageReceivedEvent;
 

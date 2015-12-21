@@ -1,6 +1,6 @@
-package com.aaomidi.soritingtelegram.model;
+package com.aaomidi.sortingtelegram.model;
 
-import com.aaomidi.soritingtelegram.SortingTelegram;
+import com.aaomidi.sortingtelegram.SortingTelegram;
 import lombok.Getter;
 import pro.zackpollard.telegrambot.api.TelegramBot;
 import pro.zackpollard.telegrambot.api.event.chat.message.CommandMessageReceivedEvent;

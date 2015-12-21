@@ -1,4 +1,4 @@
-package com.aaomidi.soritingtelegram.util;
+package com.aaomidi.sortingtelegram.util;
 
 /**
  * Created by amir on 2015-11-27.

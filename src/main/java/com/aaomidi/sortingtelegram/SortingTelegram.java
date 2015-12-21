@@ -1,11 +1,11 @@
-package com.aaomidi.soritingtelegram;
+package com.aaomidi.sortingtelegram;
 
-import com.aaomidi.soritingtelegram.handlers.CommandHandler;
-import com.aaomidi.soritingtelegram.handlers.SortingRegister;
-import com.aaomidi.soritingtelegram.hooks.TelegramHook;
-import com.aaomidi.soritingtelegram.model.Sortable;
-import com.aaomidi.soritingtelegram.util.IntegerConverter;
-import com.aaomidi.soritingtelegram.util.StringManager;
+import com.aaomidi.sortingtelegram.handlers.CommandHandler;
+import com.aaomidi.sortingtelegram.handlers.SortingRegister;
+import com.aaomidi.sortingtelegram.hooks.TelegramHook;
+import com.aaomidi.sortingtelegram.model.Sortable;
+import com.aaomidi.sortingtelegram.util.IntegerConverter;
+import com.aaomidi.sortingtelegram.util.StringManager;
 import lombok.Getter;
 
 import java.util.ArrayList;

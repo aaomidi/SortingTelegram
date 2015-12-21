@@ -1,6 +1,4 @@
-package com.aaomidi.soritingtelegram.model;
-
-import java.util.List;
+package com.aaomidi.sortingtelegram.model;
 
 /**
  * Created by amir on 2015-12-21.

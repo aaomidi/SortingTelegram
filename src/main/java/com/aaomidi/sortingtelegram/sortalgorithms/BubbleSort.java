@@ -1,8 +1,7 @@
-package com.aaomidi.soritingtelegram.sortalgorithms;
+package com.aaomidi.sortingtelegram.sortalgorithms;
 
-import com.aaomidi.soritingtelegram.SortingTelegram;
-import com.aaomidi.soritingtelegram.model.Sortable;
-import lombok.RequiredArgsConstructor;
+import com.aaomidi.sortingtelegram.SortingTelegram;
+import com.aaomidi.sortingtelegram.model.Sortable;
 
 /**
  * Created by amir on 2015-12-21.

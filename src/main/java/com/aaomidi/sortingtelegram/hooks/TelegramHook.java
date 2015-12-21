@@ -1,7 +1,7 @@
-package com.aaomidi.soritingtelegram.hooks;
+package com.aaomidi.sortingtelegram.hooks;
 
-import com.aaomidi.soritingtelegram.SortingTelegram;
-import com.aaomidi.soritingtelegram.util.StringManager;
+import com.aaomidi.sortingtelegram.SortingTelegram;
+import com.aaomidi.sortingtelegram.util.StringManager;
 import lombok.Getter;
 import pro.zackpollard.telegrambot.api.TelegramBot;
 import pro.zackpollard.telegrambot.api.event.Listener;

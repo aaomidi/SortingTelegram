@@ -1,14 +1,15 @@
-package com.aaomidi.soritingtelegram.sortalgorithms;
+package com.aaomidi.sortingtelegram.sortalgorithms;
 
-import com.aaomidi.soritingtelegram.SortingTelegram;
-import com.aaomidi.soritingtelegram.model.Sortable;
+import com.aaomidi.sortingtelegram.SortingTelegram;
+import com.aaomidi.sortingtelegram.model.Sortable;
 
 /**
  * Created by amir on 2015-12-21.
  */
-public class InsertionSort extends Sortable {
+public class SelectionSort extends Sortable {
 
-    public InsertionSort(String algorithmName, SortingTelegram instance) {
+
+    public SelectionSort(String algorithmName, SortingTelegram instance) {
         super(algorithmName, instance);
     }
 
@@ -20,7 +21,7 @@ public class InsertionSort extends Sortable {
         for (i = 0; i < len - 1 & addComparisonCount(1); i++) {
 
             index = i;
-            for (j = i + 1; j < len && addComparisonCount(1); j++) {
+            for (j = i + 1; j < data.length && addComparisonCount(1); j++) {
                 if (data[j].compareTo(data[index]) < 0 && addComparisonCount(1)) {
                     index = j;
                 }

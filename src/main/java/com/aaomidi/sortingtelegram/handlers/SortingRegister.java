@@ -1,8 +1,8 @@
-package com.aaomidi.soritingtelegram.handlers;
+package com.aaomidi.sortingtelegram.handlers;
 
-import com.aaomidi.soritingtelegram.SortingTelegram;
-import com.aaomidi.soritingtelegram.model.Sortable;
-import com.aaomidi.soritingtelegram.sortalgorithms.*;
+import com.aaomidi.sortingtelegram.SortingTelegram;
+import com.aaomidi.sortingtelegram.model.Sortable;
+import com.aaomidi.sortingtelegram.sortalgorithms.*;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import pro.zackpollard.telegrambot.api.TelegramBot;
