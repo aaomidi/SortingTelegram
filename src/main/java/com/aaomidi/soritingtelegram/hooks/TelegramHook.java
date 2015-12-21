@@ -8,14 +8,11 @@ import pro.zackpollard.telegrambot.api.event.Listener;
 import pro.zackpollard.telegrambot.api.event.chat.message.CommandMessageReceivedEvent;
 import pro.zackpollard.telegrambot.api.event.chat.message.TextMessageReceivedEvent;
 
-import java.util.regex.Pattern;
-
 /**
  * Created by amir on 2015-11-26.
  */
 public class TelegramHook implements Listener {
     private final SortingTelegram instance;
-    private final Pattern pattern = Pattern.compile(".*((spotify:)[\\w:]+).*", Pattern.CASE_INSENSITIVE);
     @Getter
     private TelegramBot bot;
 
