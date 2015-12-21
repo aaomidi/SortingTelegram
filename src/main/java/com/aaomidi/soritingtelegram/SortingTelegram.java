@@ -3,8 +3,14 @@ package com.aaomidi.soritingtelegram;
 import com.aaomidi.soritingtelegram.handlers.CommandHandler;
 import com.aaomidi.soritingtelegram.handlers.SortingRegister;
 import com.aaomidi.soritingtelegram.hooks.TelegramHook;
+import com.aaomidi.soritingtelegram.model.Sortable;
+import com.aaomidi.soritingtelegram.util.IntegerConverter;
 import com.aaomidi.soritingtelegram.util.StringManager;
 import lombok.Getter;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 /**
  * Created by amir on 2015-12-20.
@@ -18,11 +24,17 @@ public class SortingTelegram {
     private TelegramHook telegramHook;
 
     public SortingTelegram(String... args) {
-        this.setupTelegram(args[0]);
         this.setupSorts();
-        this.setupCommands();
 
-        this.keepAlive();
+        boolean runCli = runCLI();
+        if (runCli) {
+            this.cli();
+        } else {
+            this.setupTelegram(args[0]);
+            this.setupCommands();
+
+            this.keepAlive();
+        }
     }
 
     public static void main(String... args) {
@@ -55,5 +67,76 @@ public class SortingTelegram {
         while (true) {
             // Nothing.
         }
+    }
+
+    private boolean runCLI() {
+        Scanner scanner = new Scanner(System.in);
+        Integer input;
+        do {
+            StringManager.logn("Please enter how to run the program:\n\t1. CLI\n\t2. Telegram Bot");
+            input = IntegerConverter.fromString(scanner.nextLine());
+            if (input != null) {
+                break;
+            }
+            StringManager.logn("That was an unrecognized input. Lets try this again.");
+        } while (true);
+
+        return input == 1;
+    }
+
+    private void cli() {
+        do {
+
+            StringManager.logn("Please enter your data points (enter \"stop\" to stop): ");
+            Scanner scanner = new Scanner(System.in);
+            List<String> strings = new ArrayList<>();
+            do {
+                String in = scanner.nextLine();
+                if (in.equalsIgnoreCase("stop")) {
+                    break;
+                }
+                strings.add(in);
+            } while (true);
+
+
+            Integer pick;
+            do {
+                StringManager.logn("Please pick the sorting method you prefer: ");
+                int i = 1;
+                for (Sortable sortable : sortingRegister.getSortables()) {
+                    StringManager.logn("\t%d. %s", i++, sortable.getAlgorithmName());
+                }
+
+                pick = IntegerConverter.fromString(scanner.nextLine());
+                if (pick != null) {
+                    break;
+                }
+
+                StringManager.logn("That was an incorrect choice. Lets try this again.");
+            } while (true);
+
+            Sortable sortable = sortingRegister.getSortables().get(pick - 1);
+
+            String[] sorted = new String[strings.size()];
+            sorted = strings.toArray(sorted);
+
+            StringManager.logn(sortable.sort(sorted, strings.size()));
+
+            StringManager.log("The sorted strings are: ");
+            for (String s : sorted) {
+                StringManager.log(s + " ");
+            }
+
+            StringManager.logn("");
+
+            {
+                StringManager.log("Do you want to try again? Y/N");
+                String choice = scanner.nextLine();
+                if (!choice.equalsIgnoreCase("Y")) {
+                    break;
+                }
+            }
+        } while (true);
+
     }
 }

@@ -2,7 +2,6 @@ package com.aaomidi.soritingtelegram.sortalgorithms;
 
 import com.aaomidi.soritingtelegram.SortingTelegram;
 import com.aaomidi.soritingtelegram.model.Sortable;
-import lombok.RequiredArgsConstructor;
 
 /**
  * Created by amir on 2015-12-21.
@@ -29,7 +28,7 @@ public class QuickSort extends Sortable {
         int j = left;
         String pivot = arr[left];
         for (int i = j + 1; i <= right && addComparisonCount(1); i++) {
-            if (arr[i].compareTo(pivot) > 0 && addComparisonCount(1)) {
+            if (arr[i].compareTo(pivot) < 0 && addComparisonCount(1)) {
                 j++;
                 String temp = arr[j];
                 arr[j] = arr[i];

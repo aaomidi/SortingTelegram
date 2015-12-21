@@ -1,11 +1,13 @@
 package com.aaomidi.soritingtelegram.model;
 
 import com.aaomidi.soritingtelegram.SortingTelegram;
+import lombok.Getter;
 
 /**
  * Created by amir on 2015-12-21.
  */
 public abstract class Sortable implements Sort {
+    @Getter
     private final String algorithmName;
     private final SortingTelegram instance;
     private long swapCount = 0;

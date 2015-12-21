@@ -8,8 +8,8 @@ import lombok.RequiredArgsConstructor;
 import pro.zackpollard.telegrambot.api.TelegramBot;
 import pro.zackpollard.telegrambot.api.chat.Chat;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by amir on 2015-12-21.
@@ -18,7 +18,7 @@ import java.util.Set;
 public class SortingRegister {
     private final SortingTelegram instance;
     @Getter
-    private final Set<Sortable> sortables = new HashSet<>();
+    private final List<Sortable> sortables = new ArrayList<>();
 
     public void registerSorting(Sortable sortable) {
         sortables.add(sortable);

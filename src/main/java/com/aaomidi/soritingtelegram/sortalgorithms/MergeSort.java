@@ -2,7 +2,6 @@ package com.aaomidi.soritingtelegram.sortalgorithms;
 
 import com.aaomidi.soritingtelegram.SortingTelegram;
 import com.aaomidi.soritingtelegram.model.Sortable;
-import lombok.RequiredArgsConstructor;
 
 /**
  * Created by amir on 2015-12-21.
@@ -46,7 +45,7 @@ public class MergeSort extends Sortable {
         int k = low;
 
         while (i <= mid && j <= high && addComparisonCount(2)) {
-            if (helper[i].compareTo(helper[j]) >= 0) {
+            if (helper[i].compareTo(helper[j]) <= 0) {
                 strings[k] = helper[i];
                 addSwapCount(1);
                 i++;

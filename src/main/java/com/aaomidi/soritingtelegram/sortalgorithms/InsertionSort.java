@@ -2,8 +2,6 @@ package com.aaomidi.soritingtelegram.sortalgorithms;
 
 import com.aaomidi.soritingtelegram.SortingTelegram;
 import com.aaomidi.soritingtelegram.model.Sortable;
-import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
 
 /**
  * Created by amir on 2015-12-21.
@@ -23,7 +21,7 @@ public class InsertionSort extends Sortable {
 
             index = i;
             for (j = i + 1; j < len && addComparisonCount(1); j++) {
-                if (data[j].compareTo(data[index]) > 0 && addComparisonCount(1)) {
+                if (data[j].compareTo(data[index]) < 0 && addComparisonCount(1)) {
                     index = j;
                 }
             }
