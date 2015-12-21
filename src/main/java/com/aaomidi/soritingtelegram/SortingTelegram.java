@@ -30,6 +30,11 @@ public class SortingTelegram {
         if (runCli) {
             this.cli();
         } else {
+            if (args.length == 0) {
+                StringManager.logn("There was no CLI arguments. Please make sure you've entered a telegram API key as an argument.");
+                return;
+            }
+
             this.setupTelegram(args[0]);
             this.setupCommands();
 
