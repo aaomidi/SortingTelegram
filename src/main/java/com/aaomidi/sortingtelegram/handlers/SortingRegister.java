@@ -25,6 +25,7 @@ public class SortingRegister {
     }
 
     public void registerSortings() {
+        new BinarySearchTreeSort("Binary Search Tree - AVL", instance);
         new BubbleSort("Bubble Sort", instance);
         new InsertionSort("Insertion Sort", instance);
         new MergeSort("Merge Sort", instance);
@@ -34,7 +35,13 @@ public class SortingRegister {
 
     public void sort(String[] strings, int len, TelegramBot bot, Chat chat) {
         for (Sortable s : sortables) {
-            chat.sendMessage(s.sort(strings, len), bot);
+            new Thread(() -> {
+                try {
+                    chat.sendMessage(s.sort(strings.clone(), len), bot);
+                } catch (Exception ex) {
+                    // Do nothing
+                }
+            }).start();
         }
     }
 }
